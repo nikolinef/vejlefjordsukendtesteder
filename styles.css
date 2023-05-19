@@ -1,0 +1,428 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+/*-------styles til headeren---------*/
+header {
+    display: flex;
+    justify-content: center;
+    background-color: #414141; /*Header,main og footer skal have baggrundsfarven, ellers får alle elementer farven*/
+}
+
+.header{
+    width: 85vw; /*så den hvide streg ikke fylder hele breden*/
+    padding-top: 1em;
+    border-bottom: solid white 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header h1{
+    position: absolute; /*for at få teksten foran billedet*/
+    font-size: 40pt;
+    color: white;
+    font-family: 'Oregano', cursive;
+    letter-spacing: 1px;
+}
+
+#sol{
+    width: 70vw;
+}
+
+/*----------styles til main--------*/
+main{
+    background-color: #414141;
+    display: flex;
+    flex-direction: column; /*for at kortene til at være lodret*/
+    justify-content: center;
+    align-items: center;
+    padding: 2em 0; /* luft til header og footer*/
+    gap: 6em; /*længere luft mellem kortene*/
+}
+
+#trekort{
+    width: 70vw;
+    height: 90vh;
+    border-style: solid;
+    border-color: #b2bc0d;
+    border-width: 8px;
+    display: flex; /*for at få billedekortene på vandret*/
+}
+
+.billedekort{
+    width: 34%;
+    height: 100%;
+    padding: 1em 1em;
+    display: flex; /*for at rykke teksten inde i kortene ned i bunden*/
+    flex-direction: column; 
+    justify-content: end;
+    transition: width 1s; /*bredden skal blive større når man hoover*/
+    transition-timing-function: ease;
+}
+
+a:link{
+    text-decoration: none;
+    color: white;
+}
+
+a:visited{
+    text-decoration: none;
+    color: white;
+}
+
+h2{
+    font-size: 31pt;
+    font-family: 'Oregano', cursive;
+    letter-spacing: 1px;
+}
+
+p{
+    font-family: 'Pontano Sans', sans-serif;
+    font-size: 16pt;
+    padding: 0 0 2em 0;
+}
+
+.billedekort:hover{
+    width: 65%; 
+    opacity: 0.85;
+}
+
+.billedekort:first-child{
+    background-color: bisque;
+}
+
+.billedekort:nth-child(2){
+    background-color: beige;
+}
+
+.billedekort:nth-child(3){
+    background-color:antiquewhite;
+}
+
+.roadtripkort{
+    width: 70vw;
+    height: 90vh;
+    background-color: #b2bc0d;
+    display: flex;
+    align-items: end;
+    padding: 0 0 8em 8em; /*knappens position*/
+}
+
+.knap{
+    border-style: solid;
+    border-color: white;
+    border-width: 3.5px;
+    border-radius: 10px;
+    font-family: 'Oregano', cursive;
+    font-size: 36pt;
+    background-color: #c92e5d;
+    color: white;
+    padding: 1.5%;
+}
+
+.omos{
+    width: 70vw;
+    padding: 5% 3%;
+    background-color: #e1b585;
+    display: flex; /* Så de to diver vises i koloner*/
+}
+
+.grafik{
+    width: 50%;
+    display: flex; /*så porten og billedet kan rykkes*/
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /*så det kun er padding i .omos der styrre afstanden mellem kanten*/
+    position: relative; /*så den grå firkant kan komme foran porten*/
+}
+
+.grafik img{
+    height: 450px; /*størrelsen på porten kan æmdres, fordi det er en svg fil*/
+} /*højden er fast så den ikke tilpasser sig*/
+
+.pladsholder{
+    background-color: grey;
+    width: 250px; /*så hvidt muligt samme bredde som porten*/
+    height: 250px; /*højden er fast så den ikke tilpasser sig*/
+    position: absolute;/* så den kan være uden for porten*/
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);/*så den bliver ved med at være i midten*/
+    z-index: 10;
+}
+
+.port {
+    position: relative;
+    z-index: 2;
+}
+
+.text{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end; /*så knappen altid er på linje med porten*/
+    align-items: start; /*så teksten er venstrestillet og starter i midten*/
+}
+
+.text h2{
+    color: white;
+}
+
+.text .knap{
+    background-color: #ff9412;
+    font-size: 24pt;
+}
+
+#følgos{
+    width: 70vw;
+    background-color: #e1b585;
+    text-align: center;
+    padding-top: 3em;
+}
+
+#følgos h2{
+    color: white;
+}
+
+.some{
+    display: flex; 
+    flex-direction: column;
+    flex-wrap: wrap; /*så teksten kommer neden under ikonerne*/
+    justify-content: space-around;
+    height: 30vh; /*så der kun er plads et ikon og tekst*/
+}
+
+/*--------styles til footer-forside--------*/
+#forsidefooter{
+    background-color: #414141;
+    color: white;
+    font-family: 'Oregano', cursive;
+    text-align: center;
+    padding-bottom: 2em; /*samme afstand som til headeren*/
+}
+
+label img{ /*når man klikker på søg ikonet kommer man til inputfeltet*/
+    margin-top: 1em;
+}
+
+#søgefelt{
+    width: 60vh;
+    font-size: 16pt;
+    padding: 8px;
+    font-family: 'Oregano', cursive;
+    color: #414141;
+    border-style: none;
+    border-radius: 5px;
+    background-color: #ffddb9;
+    margin-bottom: 1em;
+}
+
+.tiltoppen{
+    transform: rotate(180deg);
+    font-size: 60pt;
+    position: fixed; /*så den følger med til toppen*/
+    bottom: 0.5em; /*pilens position*/
+    right: 1.30em;
+}
+
+/*---------------mediea q 1120 tablet---------------*/
+/*---------------mediea q 1120 tablet---------------*/
+
+@media screen and (max-width:1120px) {
+
+    .header h1{
+        font-size: 30pt;
+    }
+
+    /*--------styles til main--------*/
+
+    #trekort{
+        width: 85vw;
+    }
+
+    .billedekort{
+        padding: 0 1em; 
+    }
+
+    h2{
+        font-size: 24pt;
+    }
+
+    p{
+        font-size: 14pt;
+    }
+
+    .roadtripkort{
+        width: 85vw;
+    }
+
+    .knap{
+        font-size: 26pt;
+    }
+
+    .omos{
+        flex-direction: column;
+        width: 85vw;
+    }
+
+    .omos p{
+        margin: 0 4em;
+    }
+
+    .grafik{
+        width: 100%;
+        height: 50%;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2em;
+    }
+
+    .pladsholder{
+        width: 250px;
+        height: 250px;
+    }
+
+    .text .knap{
+        font-size: 26pt;
+    }
+
+    .text {
+        align-items: center;
+        width: 100%;
+    }
+
+    .text p{
+        text-align: center;
+    }
+
+    #følgos{
+        width: 85vw;
+    }
+
+    .some {
+        flex-wrap: wrap;
+        height: auto;
+        padding-top: 1em;
+        height: 30vh;
+    }
+
+    .some img{
+        height: 60px;
+        margin-bottom: 0.5em;
+    }
+
+    /*-----styles til forside footer-----*/
+
+    #søgefelt{
+        width: 40vw;
+    }
+
+    .tiltoppen{
+        font-size: 45pt;
+        right: 1em;
+    }
+}
+
+/*------------mediea q 840 mobil---------------*/
+/*------------mediea q 840 mobil---------------*/
+
+@media screen and (max-width:840px){
+    .header h1 {
+        font-size: 19pt;
+    }
+
+    .header {
+        width: 100%;
+    }
+
+    #sol {
+        width: 100%;
+    }
+
+    /*--------styles til main--------*/
+
+    main{
+        gap: 3em;
+    }
+
+    #trekort{
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .billedekort{
+        width: 100%; /*højden og breden er byttet om, så de udvidder sig lodret*/
+        height: 34%;
+        padding: 1.5em 1.5em;
+        transition: height 1s; /*højden skal blive større når man hoover*/
+        transition-timing-function: ease;
+    }
+
+    .billedekort:hover{
+        height: 65%;
+        width: 100%; /*Ellers forblev breden stadig kort*/
+    }
+
+    h2 {
+        font-size: 18pt;
+    }
+
+    p{
+        font-size: 14pt;
+        padding: 0;
+    }
+
+    .roadtripkort{
+        width: 90%;
+        height: 60vh;
+        padding: 3em 1.5em;
+    }
+
+    .omos {
+        width: 90%;
+    }
+
+    .grafik img {
+        width: 85vw;
+    }
+
+    .text p{
+        padding: 2% 0 4% 0;
+    }
+
+    #følgos {
+        width: 90%;
+        padding: 1.5em;
+    }
+
+    .some{
+        height: 100%;
+        justify-content: space-between;
+    }
+
+    .some img{
+        height: 50px;
+        margin-bottom: 0;
+    }
+
+    #følgos p{
+        padding: 0.5em 0 1.5em 0;
+    }
+
+/*-------forside footer----------*/
+    label img{
+        width: 40px;
+    }
+
+    #søgefelt{
+        width: 60vw;
+    }
+
+    .tiltoppen{
+        display: none;
+    }
+}
+
