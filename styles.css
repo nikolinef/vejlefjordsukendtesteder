@@ -76,21 +76,15 @@ main{
 }
 
 .billedekort:first-child{
-    background-image: url(images/img_2767.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url(images/img_2767.jpg) no-repeat center;
 }
 
 .billedekort:nth-child(2){
-    background-image: url(images/img_2882.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url(images/img_2882.jpg) no-repeat center;
 }
 
 .billedekort:nth-child(3){
-    background-image: url(images/img_2818.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url(images/img_2818.jpg) no-repeat center;
 }
 
 a:link{
@@ -118,11 +112,8 @@ p{
 .roadtripkort{
     width: 70vw;
     height: 90vh;
-    background-color: #b2bc0d;
-    background-image: url(images/kortmtekst.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background: url(images/kortmtekst.jpg) no-repeat center;
+    background-size: cover; /*shortcut reagere ikke på cover...*/
     display: flex;
     align-items: end;
     padding: 0 0 8em 8em; /*knappens position*/
@@ -168,10 +159,8 @@ p{
     left: 50%;
     transform: translate(-50%, -50%);/*så den bliver ved med at være i midten*/
     z-index: 10;
-    background-image: url(images/img_110609.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto 250px; /*så hele højden er med på billedet*/
+    background: url(images/img_110609.jpg) no-repeat center;
+    background-size: auto 250px; /*så hele højden er med på billedet (showtcut reagere stadig ikek på background-size*/
 }
 
 .port {
@@ -223,7 +212,7 @@ p{
 }
 
 .some a:hover{
-    color: #09d8d8;
+    color: #ff9412;
     text-decoration: underline;
 }
 
@@ -319,30 +308,23 @@ label img{ /*når man klikker på søg ikonet kommer man til inputfeltet*/
 .enaftre{
     width: 325px;
     height: 225px;
-    background-color: #ff9412;
 }
 
 #trebillederhvidbjerg .enaftre:nth-child(1){
-    background-image: url(images/img_2795.jpg); /*billederne skal laves mindre i photoshop*/
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto 225px;
+    background: url(images/img_2795.jpg) no-repeat center;
+    background-size: cover;
 }
 
 #trebillederhvidbjerg .enaftre:nth-child(2){
     width: 225px; /*den i midten er på højkant*/
     height: 325px;
-    background-image: url(images/img_2785.jpg);
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: auto 325px;
+    background: url(images/img_2785.jpg) no-repeat right;
+    background-size: cover;
 }
 
 #trebillederhvidbjerg .enaftre:nth-child(3){
-    background-image: url(images/img_2782.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto 225px;
+    background: url(images/img_2782.jpg) no-repeat center;
+    background-size: cover;
 }
 
 #adresseelement{
@@ -421,29 +403,25 @@ label img{ /*når man klikker på søg ikonet kommer man til inputfeltet*/
     display: flex; /*udgangspunkt for  collagelayout*/
     align-items: center; /*alle collage elementer er rykket ud fra det her udgangspunkt*/
 }
-/*Layout for billedecollage mangler stadig*/
+/*              Layout for billedecollage mangler stadig*/
 #billedecollagehvidbjerg #img1{
     width: 200px;
     height: 200px;
-    background-image: url(images/img_2796.jpg);
-    background-repeat: no-repeat;
+    background: url(images/img_2796.jpg) no-repeat bottom;
     background-size: cover;
-    background-position: bottom;
     z-index: 0;
 }
 
 #billedecollagehvidbjerg #img2{
     width: 250px;
     height: 300px;
-    background-image: url(images/img_2791.jpg);
-    background-repeat: no-repeat;
+    background: url(images/img_2791.jpg) no-repeat bottom;
     background-size: cover;
-    background-position: bottom;
     z-index: 0;
 }
 
 #firkant{
-    width: 25px;
+    width: 40px;
     height: 350px;
     background: #275b10;
     z-index: 10;
@@ -452,10 +430,8 @@ label img{ /*når man klikker på søg ikonet kommer man til inputfeltet*/
 #billedecollagehvidbjerg #img3{
     width: 275px;
     height: 350px;
-    background-image: url(images/img_2799.jpg);
-    background-repeat: no-repeat;
+    background: url(images/img_2799.jpg) no-repeat left;
     background-size: cover;
-    background-position: left;
     z-index: 20;
     right: 25px;
 }
@@ -464,9 +440,7 @@ label img{ /*når man klikker på søg ikonet kommer man til inputfeltet*/
 #billedebreakerhvidbjerg{
     width: 100vw;
     height: 100vh;
-    background-image: url(images/img_110936.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url(images/img_110936.jpg) no-repeat center;
     background-size: cover;
 }
 
@@ -504,74 +478,58 @@ h3{
     width: 140px; /*kvadratisk størrelse*/
     grid-row: 1 / 2;
     grid-column: 3 / 4;
-    background-image: url(images/img_2797.jpg);
-    background-repeat: no-repeat;
+    background: url(images/img_2797.jpg) no-repeat center;
     background-size: cover;
-    background-position: center;
 }
 
 #billedegridhvidbjerg #B{
     grid-row: 3 / 4;
     grid-column: 1 / 2;
-    background-image: url(images/img_2766.jpg);
-    background-repeat: no-repeat;
+    background: url(images/img_2766.jpg) no-repeat center;
     background-size: cover;
-    background-position: center;
 }
 
 #billedegridhvidbjerg #C{
     grid-row: 2 / 4;
     grid-column: 2 / 3;
-    background-image: url(images/img_114239.jpg);
-    background-repeat: no-repeat;
+    background: url(images/img_114239.jpg) no-repeat center;
     background-size: cover;
-    background-position: center;
 }
 
 #billedegridhvidbjerg #D{
     grid-row: 2 / 3;
     grid-column: 3 / 5;
-    background-image: url(images/img_2773.jpg);
-    background-repeat: no-repeat;
+    background: url(images/img_2773.jpg) no-repeat bottom;
     background-size: cover;
-    background-position: bottom;
 }
 
 #billedegridhvidbjerg #E{
     grid-row: 4 / 5;
     grid-column: 1 / 3;
-    background-image: url(images/img_2768.jpg);
-    background-repeat: no-repeat;
+    background: url(images/img_2768.jpg) no-repeat bottom;
     background-size: cover;
-    background-position: bottom;
 }
 
 #billedegridhvidbjerg #F{
     grid-row: 3 / 5;
     grid-column: 3 / 4;
-    background-image: url(images/img_2803.jpg);
-    background-repeat: no-repeat;
+    background: url(images/img_2803.jpg) no-repeat left;
     background-size: cover;
-    background-position: left;
 }
 
 #billedegridhvidbjerg #G{
     grid-row: 3 / 4;
     grid-column: 4 / 5;
-    background-image: url(images/img_2750.jpg);
-    background-repeat: no-repeat;
+    background: url(images/img_2750.jpg) no-repeat right;
     background-size: cover;
-    background-position: right;
 }
 
 #billedegridhvidbjerg #H{
     width: 140px; /*kvadratisk størrelse*/
     grid-row: 5 / 6;
     grid-column: 2 / 3;
-    background-image: url(images/img_2786.jpg);
-    background-repeat: no-repeat;
+    background: url(images/img_2786.jpg) no-repeat center;
     background-size: cover;
-    background-position: center;
     justify-self: end; /*så den er parallel med den inderste linje*/
 }
 
@@ -630,6 +588,23 @@ footer .some p{
     gap: 2%; /*mellemrum mellem billederne*/
 }
 
+#trebilledertrasko .enaftre:nth-child(1){
+    background: url(images/img_2913.jpg) no-repeat bottom;
+    background-size: cover;
+}
+
+#trebilledertrasko .enaftre:nth-child(2){
+    width: 225px; /*den i midten er på højkant*/
+    height: 325px;
+    background: url(images/img_2934.jpg) no-repeat center;
+    background-size: cover;
+}
+
+#trebilledertrasko .enaftre:nth-child(3){
+    background: url(images/img_2927.jpg) no-repeat right;
+    background-size: cover;
+}
+
 #billedecollagetrasko{
     width: 100%; /*angiv specifik højde og bredde så der kommer whitepsace */
     height: 100%;
@@ -639,10 +614,35 @@ footer .some p{
     align-items: center; /*alle collage elementer er rykket ud fra det her udgangspunkt*/
 }
 
+#billedecollagetrasko #img1{
+    width: 200px;
+    height: 200px;
+    background: url(images/img_2909.jpg) no-repeat bottom;
+    background-size: cover;
+    z-index: 0;
+}
+
+#billedecollagetrasko #img2{
+    width: 250px;
+    height: 300px;
+    background: url(images/img_2867.jpg) no-repeat left;
+    background-size: cover;
+    z-index: 0;
+}
+
+#billedecollagetrasko #img3{
+    width: 275px;
+    height: 350px;
+    background: url(images/img_2933.jpg) no-repeat left;
+    background-size: cover;
+    z-index: 20;
+    right: 25px;
+}
+
 #billedebreakertrasko{
     width: 100vw;
     height: 100vh;
-    background-color: #741E5E;
+    background: url(images/img_2882.jpg) no-repeat center;
 }
 
 #billedegridtrasko{
@@ -654,55 +654,63 @@ footer .some p{
     grid: 140px 210px 140px 210px 140px / 140px 210px 210px 140px;
     gap: 20px;
 }
-/*gentagelser så hver individuel div kan få baggrundsbillede*/
+/*            gentagelser så hver individuel div kan få baggrundsbillede*/
 #billedegridtrasko #A{
     width: 140px; /*kvadratisk størrelse*/
     grid-row: 1 / 2;
     grid-column: 3 / 4;
-    background-color: #056c66;
+    background: url(images/img_2878.jpg) no-repeat center;
+    background-size: cover;
 }
 
 #billedegridtrasko #B{
     grid-row: 3 / 4;
     grid-column: 1 / 2;
-    background-color: #056c66;
+    background: url(images/img_2937.jpg) no-repeat;
+    background-size: cover;
 }
 
 #billedegridtrasko #C{
     grid-row: 2 / 4;
     grid-column: 2 / 3;
-    background-color: #741E5E;
+    background: url(images/img_2906.jpg) no-repeat;
+    background-size: cover;
 }
 
 #billedegridtrasko #D{
     grid-row: 2 / 3;
     grid-column: 3 / 5;
-    background-color: #b2bc0d;
+    background: url(images/img_2917.jpg) no-repeat bottom;
+    background-size: cover;
 }
 
 #billedegridtrasko #E{
     grid-row: 4 / 5;
     grid-column: 1 / 3;
-    background-color: #b2bc0d;
+    background: url(images/img_2935.jpg) no-repeat center;
+    background-size: cover;
 }
 
 #billedegridtrasko #F{
     grid-row: 3 / 5;
     grid-column: 3 / 4;
-    background-color: #741E5E;
+    background: url(images/img_2922.jpg) no-repeat left;
+    background-size: cover;
 }
 
 #billedegridtrasko #G{
     grid-row: 3 / 4;
     grid-column: 4 / 5;
-    background-color: #056c66;
+    background: url(images/img_2880.jpg) no-repeat center;
+    background-size: cover;
 }
 
 #billedegridtrasko #H{
     width: 140px; /*kvadratisk størrelse*/
     grid-row: 5 / 6;
     grid-column: 2 / 3;
-    background-color: #056c66;
+    background: url(images/img_2931.jpg) no-repeat center;
+    background-size: cover;
     justify-self: end; /*så den er parallel med den inderste linje*/
 }
 
@@ -717,6 +725,23 @@ footer .some p{
     gap: 2%; /*mellemrum mellem billederne*/
 }
 
+#trebillederholster .enaftre:nth-child(1){
+    background: url(images/img_2856.jpg) no-repeat center;
+    background-size: cover;
+}
+
+#trebillederholster .enaftre:nth-child(2){
+    width: 225px; /*den i midten er på højkant*/
+    height: 325px;
+    background: url(images/img_2917.jpg) no-repeat right;
+    background-size: cover;
+}
+
+#trebillederholster .enaftre:nth-child(3){
+    background: url(images/img_2858.jpg) no-repeat center;
+    background-size: cover;
+}
+
 #billedecollageholster{
     width: 100%; /*angiv specifik højde og bredde så der kommer whitepsace */
     height: 100%;
@@ -726,10 +751,36 @@ footer .some p{
     align-items: center; /*alle collage elementer er rykket ud fra det her udgangspunkt*/
 }
 
+#billedecollageholster #img1{
+    width: 200px;
+    height: 200px;
+    background: url(images/img_2841.jpg) no-repeat center;
+    background-size: cover;
+    z-index: 0;
+}
+
+#billedecollageholster #img2{
+    width: 250px;
+    height: 300px;
+    background: url(images/img_2820.jpg) no-repeat center;
+    background-size: cover;
+    z-index: 0;
+}
+
+#billedecollageholster #img3{
+    width: 275px;
+    height: 350px;
+    background: url(images/img_2839.jpg) no-repeat right;
+    background-size: cover;
+    z-index: 20;
+    right: 25px;
+}
+
 #billedebreakerholster{
     width: 100vw;
     height: 100vh;
-    background-color: #741E5E;
+    background: url(images/img_2823.jpg) no-repeat center;
+    background-size: cover;
 }
 
 #billedegridholster{
@@ -746,50 +797,58 @@ footer .some p{
     width: 140px; /*kvadratisk størrelse*/
     grid-row: 1 / 2;
     grid-column: 3 / 4;
-    background-color: #056c66;
+    background: url(images/img_2844.jpg) no-repeat;
+    background-size: cover;
 }
 
 #billedegridholster #B{
     grid-row: 3 / 4;
     grid-column: 1 / 2;
-    background-color: #056c66;
+    background: url(images/img_2836.jpg) no-repeat;
+    background-size: cover;
 }
 
 #billedegridholster #C{
     grid-row: 2 / 4;
     grid-column: 2 / 3;
-    background-color: #741E5E;
+    background: url(images/img_2853.jpg) no-repeat right;
+    background-size: cover;
 }
 
 #billedegridholster #D{
     grid-row: 2 / 3;
     grid-column: 3 / 5;
-    background-color: #b2bc0d;
+    background: url(images/img_2825.jpg) no-repeat bottom;
+    background-size: cover;
 }
 
 #billedegridholster #E{
     grid-row: 4 / 5;
     grid-column: 1 / 3;
-    background-color: #b2bc0d;
+    background: url(images/img_2861.jpg) no-repeat center;
+    background-size: cover;
 }
 
 #billedegridholster #F{
     grid-row: 3 / 5;
     grid-column: 3 / 4;
-    background-color: #741E5E;
+    background: url(images/img_2847.jpg) no-repeat center;
+    background-size: cover;
 }
 
 #billedegridholster #G{
     grid-row: 3 / 4;
     grid-column: 4 / 5;
-    background-color: #056c66;
+    background: url(images/img_2828.jpg) no-repeat center;
+    background-size: cover;
 }
 
 #billedegridholster #H{
     width: 140px; /*kvadratisk størrelse*/
     grid-row: 5 / 6;
     grid-column: 2 / 3;
-    background-color: #056c66;
+    background: url(images/img_2814.jpg) no-repeat center;
+    background-size: cover;
     justify-self: end; /*så den er parallel med den inderste linje*/
 }
 
@@ -838,16 +897,13 @@ article h2{
 .billedefirkant{
     width: 400px;
     height: 350px;
-    background-image: url(images/sunrise.jpg);
-    background-repeat: no-repeat;
+    background: url(images/sunrise.jpg) no-repeat;
     background-size: cover;
 }
 
 .sektion:nth-of-type(3) .billedefirkant{
-    background-image: url(images/sunset.jpg);
-    background-repeat: no-repeat;
+    background: url(images/sunset.jpg) no-repeat center;
     background-size: cover;
-    background-position: center;
 }
 
 .sektion:nth-of-type(2){
@@ -873,8 +929,7 @@ article h2{
     width: 350px; /*kvadratisk*/
     height: 350px;
     border-radius: 50%; /*50% gør div'en til en cirkel*/
-    background-image: url(images/img_2818.jpg);
-    background-repeat: no-repeat;
+    background: url(images/img_2818.jpg) no-repeat;
     background-size: cover;
 }
 
@@ -1027,6 +1082,22 @@ article h2{
         width: 85vw;
     }
 
+    #billedecollagehvidbjerg #img1{
+        height: 175px;
+    }
+
+    #billedecollagehvidbjerg #img2{
+        height: 250px;
+    }
+
+    #firkant{
+        height: 300px;
+    }
+    
+    #billedecollagehvidbjerg #img3{
+        height: 300px;
+    }
+
     #billedebreakerhvidbjerg{
         height: 50vh;
     }
@@ -1051,6 +1122,18 @@ article h2{
         width: 100vw;
     }
 
+    #billedecollagetrasko #img1{
+        height: 175px;
+    }
+
+    #billedecollagetrasko #img2{
+        height: 250px;
+    }
+    
+    #billedecollagetrasko #img3{
+        height: 300px;
+    }
+
     #billedebreakertrasko{
         height: 50vh;
     }
@@ -1072,6 +1155,18 @@ article h2{
     #trebillederholster{
         gap: 0%;
         width: 100vw;
+    }
+
+    #billedecollageholster #img1{
+        height: 175px;
+    }
+
+    #billedecollageholster #img2{
+        height: 250px;
+    }
+    
+    #billedecollageholster #img3{
+        height: 300px;
     }
 
     #billedebreakerholster{
@@ -1175,10 +1270,8 @@ article h2{
         width: 90%;
         height: 40vh;
         padding: 3em 1.5em;
-        background-image: url(images/kortudentekst.jpg);
-        background-repeat: no-repeat;
+        background: url(images/kortudentekst.jpg) no-repeat left;
         background-size: cover;
-        background-position: left;
     }
 
     .omos {
@@ -1267,6 +1360,7 @@ article h2{
         width: 85vw;
         height: 40vh;
     }
+
     #trebillederhvidbjerg .enaftre:nth-child(1){
         background-size: cover;
         background-position: bottom; /*beskæring så der ikke kommer så meget himmel med*/
@@ -1286,7 +1380,19 @@ article h2{
     #beskrivelseskort{
         width: 90vw;
     }
-    /*-------styles til dropdown content*/
+
+    #billedecollagehvidbjerg{
+        flex-direction: column;
+    }
+
+    #firkant{
+        width: 100%;
+        height: 40px;
+    }
+
+    #billedecollagehvidbjerg #img3{
+        width: 100%;
+    }
 
     .h3ogp{
         width: 100%; /*så de igen bliver til en kolonne på mobil*/
@@ -1324,6 +1430,19 @@ article h2{
         align-content: space-between;
     }
 
+    #trebilledertrasko .enaftre:nth-child(2){
+        width: 85vw; /*den i midten er på same størrelse*/
+        height: 40vh;
+    }
+
+    #billedecollagetrasko{
+        flex-direction: column; /*så "collages kommer på lodret rækker*/
+    }
+
+    #billedecollagetrasko #img3{
+        width: 100%;
+    }
+
     #billedebreakertrasko{
         width: 100vw;
         height: 40vh; /*så den ikke bliver så høj*/
@@ -1352,6 +1471,20 @@ article h2{
     /*------styles til underside holster hage------*/
     #trebillederholster{
         align-content: space-between;
+    }
+
+    #trebillederholster .enaftre:nth-child(2){
+        width: 85vw; /*den i midten er på same størrelse*/
+        height: 40vh;
+        background-position: center;
+    }
+
+    #billedecollageholster{
+        flex-direction: column;
+    }
+
+    #billedecollageholster #img3{
+        width: 100%;
     }
 
     #billedebreakerholster{
@@ -1407,7 +1540,6 @@ article h2{
     }
 
     #billedecirkel{
-        background-color: #c92e5d;
         width: 250px; /*kvadratisk*/
         height: 250px;
     }
