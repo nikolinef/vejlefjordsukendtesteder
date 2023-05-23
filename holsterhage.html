@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holster Hage</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oregano:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <img id="sol" src="grafik/sol.svg" alt="Solopgang">
+            <h1>Vejle Fjords ukendte steder</h1>
+            <a href="index.html"><h1 class="tilbage" alt="Tilbage knap">V</h1></a>
+        </div>
+    </header>
+    <main class="underside">
+        <div class="hero">
+            <h2>Hoslter Hage</h2>
+            <video class="herovideo" autoplay controls>
+                <source src="images/videos/hvidbjergstrand7mb.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <h2 class="citat">Don't be a Tourist. <br> Be a Traveler.</h2>
+
+        <div id="trebillederholster">
+            <div class="enaftre"></div>
+            <div class="enaftre"></div>
+            <div class="enaftre"></div>
+        </div>
+
+        <div id="adresseelement">
+        <h2 id="adresse">Adresse</h2>
+        <img id="lokikon" src="grafik/locicon.svg" alt="Lokations ikon">
+        <a id="loklink" href="https://www.google.com/maps/place/Holtser+Hage/@55.692309,9.6596178,15z/data=!4m6!3m5!1s0x464c85ab5abb7765:0xbc06a2eb916a3d27!8m2!3d55.6940269!4d9.6673855!16s%2Fg%2F1txfmrlz">Holster Hage<br>7080 Børkop</a>
+        </div>
+
+        <div id="beskrivelseskort">
+            <h2 id="beskrivelse">Beskrivelse</h2>
+            <p id="beskrivelsep">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores rem adipisci nesciunt laboriosam repellat, libero suscipit ut vel voluptatem deleniti laudantium autem rerum accusantium necessitatibus iste! Cumque ipsa voluptatibus molestiae!</p>
+            <div id="dropdownContent" class="dropdown-content"> <!--En classe til styles og et id til javascript-->
+                <div class="halvbeskrivelse">
+                    <div class="h3ogp">
+                        <h3>Naturbeskrivelse</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae fugit nam quibusdam ab corporis atque, expedita magnam! Accusamus, possimus quaerat. Eum non aliquid distinctio, doloremque corporis obcaecati iusto minus exercitationem.</p>
+                    </div>
+
+                    <div class="h3ogp">
+                        <h3>Faciliteter</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae fugit nam quibusdam ab corporis atque, expedita magnam! Accusamus, possimus quaerat. Eum non aliquid distinctio, doloremque corporis obcaecati iusto minus exercitationem.</p>
+                    </div>
+
+                    <div class="h3ogp">
+                        <h3>Toiletmuligheder</h3>
+                        <p>Der er et offtentligt toilet nede af skranten længst til højre i en firkantet bygning med gulemursten, 
+                            hvilket også er markeret på google maps samt det kortet på parkeringspladsen. Toilettet er i ok stand 
+                            med spritdispense.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="billedecollageholster">
+                    <div id="img1"></div>
+                    <div id="img2"></div>
+                    <div id="firkant"></div>
+                    <div id="img3"></div>
+                </div>
+
+                <div class="halvbeskrivelse">
+                    <div class="h3ogp">
+                        <h3>Parkeringsmuligheder</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae fugit nam quibusdam ab corporis atque, expedita magnam! Accusamus, possimus quaerat. Eum non aliquid distinctio, doloremque corporis obcaecati iusto minus exercitationem.</p>
+                    </div>
+
+                    <div class="h3ogp">
+                        <h3>Offentlig transport</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae fugit nam quibusdam ab corporis atque, expedita magnam! Accusamus, possimus quaerat. Eum non aliquid distinctio, doloremque corporis obcaecati iusto minus exercitationem.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="knap" id="toggleButton" onclick="toggleDropdown ()">Læs mere</button> <!--Et id til java script og en class så den stadig holder styles som de andre knapper-->
+
+            <script> /*Det blå skrift er javascripts "indbygget" funktioner og det orange i lyserøde () er det id man selv har givet(valgfrit)*/
+                function toggleDropdown() {
+                    var dropdownContent = document.getElementById("dropdownContent"); /*"henter" dropdown contentet*/
+                    var toggleButton = document.getElementById("toggleButton"); /*henter onclick knappen*/
+
+                    if (dropdownContent.style.display === "none") {
+                        dropdownContent.style.display = "block"; /*viser content*/
+
+                        toggleButton.textContent = "Læs mindre"; /*ændre knap teksten*/
+                    } 
+                    else {
+                        dropdownContent.style.display = "none"; /*gemmer content*/
+                        toggleButton.textContent = "Læs mere"; /*ændre knap teksten*/
+                    }
+                }
+            </script>
+
+        </div>
+
+        <div id="billedebreakerholster">    
+        </div>
+
+        <div id="delelement">
+            <h2>Del din oplevelse</h2>
+            <p>Inspirer andre og del dine dejlige oplevelser på sociale medier <br>under vores hashtag:</p>
+            <h3>#holsterhagevfus</h3>
+        </div>
+
+        <div id="billedegridholster">
+            <div id="A"></div>
+            <div id="B"></div>
+            <div id="C"></div>
+            <div id="D"></div>
+            <div id="E"></div>
+            <div id="F"></div>
+            <div id="G"></div>
+            <div id="H"></div>
+        </div>
+    </main>
+    <footer>
+        <label for="søgefelt"><img src="grafik/søgglas.svg" alt="Forstørrelsesglas"></label>
+        <br>
+        <input type="search" id="søgefelt" name="søgefelt">
+        <div id="footerknapper">
+            <a href="omos.html"><div id="omknap">Om V.F.U.S.</div></a>
+            <a href="index.html#følgos"><div id="kontaktknap">Kontakt</div></a>
+        </div>
+        <div class="some">
+            <img src="grafik/insta.svg" alt="Instagram Ikon">
+            <p>@vejlefjordsukendtesteder</p>
+            <img src="grafik/tiktok.svg" alt="Tiktok Ikon">
+            <p>@vejlefjordsukendtesteder</p>
+            <img src="grafik/youtube.svg" alt="YouTube Ikon">
+            <p>Vejle Fjords ukendte steder</p>
+        </div>
+        <a href="index.html"><h1 class="tiltoppen">V</h1></a>
+    </footer>
+</body>
+</html>
