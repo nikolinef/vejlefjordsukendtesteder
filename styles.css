@@ -128,7 +128,14 @@ p{
     font-size: 36pt;
     background-color: #c92e5d;
     color: white;
+    box-shadow: 0 0 10px 2px black; /*x og y er 0 så skyggen kommer rundt alle steder, 10px blur 2px shadow bredde*/
     padding: 1%;
+    transition: transform 0.75s ease-out; /*knappens hover effekt*/
+}
+
+.knap:hover{
+    transform: scale(1.25); /*hvor meget den bliver større*/
+    box-shadow: 0 0 15px 4px black; /*10px blur 2px shadow bredde*/
 }
 
 .omos{
@@ -161,6 +168,7 @@ p{
     z-index: 10;
     background: url(images/img_110609.jpg) no-repeat center;
     background-size: auto 250px; /*så hele højden er med på billedet (showtcut reagere stadig ikek på background-size*/
+    box-shadow: 0 0 25px 1px black; /*20px blur så shadow bliver tyndere end på knapperne*/
 }
 
 .port {
@@ -249,6 +257,11 @@ label img{ /*når man klikker på søg ikonet kommer man til inputfeltet*/
     right: 1.30em;
 }
 
+#logo{
+    margin-top: 1em; /*space mellem title og logo*/
+    width: 150px;
+}
+
 /*--------styles til footer-om os--------*/
 #omosfooter .knap{
     background-color: #ff9412;
@@ -313,6 +326,7 @@ label img{ /*når man klikker på søg ikonet kommer man til inputfeltet*/
 #trebillederhvidbjerg .enaftre:nth-child(1){
     background: url(images/img_2795.jpg) no-repeat center;
     background-size: cover;
+    box-shadow: 0 0 25px 1px black;
 }
 
 #trebillederhvidbjerg .enaftre:nth-child(2){
@@ -320,11 +334,13 @@ label img{ /*når man klikker på søg ikonet kommer man til inputfeltet*/
     height: 325px;
     background: url(images/img_2785.jpg) no-repeat right;
     background-size: cover;
+    box-shadow: 0 0 25px 1px black;
 }
 
 #trebillederhvidbjerg .enaftre:nth-child(3){
     background: url(images/img_2782.jpg) no-repeat center;
     background-size: cover;
+    box-shadow: 0 0 25px 1px black;
 }
 
 #adresseelement{
@@ -375,10 +391,15 @@ label img{ /*når man klikker på søg ikonet kommer man til inputfeltet*/
 
 #beskrivelsep{
     text-align: center;
+    padding: 0 4em;
 }
 /*------styles til dropdown content*/
 #dropdownContent{
-    display: block; /*gemmer content som default*/
+    display: none; /*gemmer content som default*/
+}
+
+#toggleButton:hover{
+    cursor: pointer;
 }
 
 .halvbeskrivelse {
@@ -393,6 +414,14 @@ label img{ /*når man klikker på søg ikonet kommer man til inputfeltet*/
 .h3ogp{
     width: 50%; /*så de kommer i to kolonner*/
     padding: 0 2%; /*plads mellem paragraferne*/
+}
+
+.halvbeskrivelse .h3ogp a{
+    color: #275b10;
+}
+
+.halvbeskrivelse .h3ogp a:hover{
+    text-decoration: underline;
 }
 
 #billedecollagehvidbjerg{
@@ -442,6 +471,7 @@ label img{ /*når man klikker på søg ikonet kommer man til inputfeltet*/
     height: 100vh;
     background: url(images/img_110936.jpg) no-repeat center;
     background-size: cover;
+    box-shadow: 0 0 30px 1px white;
 }
 
 #delelement{
@@ -468,6 +498,7 @@ h3{
     display: flex; /*så hele grid'et kan rykkes*/
     justify-content: center; /*så grid'et kommet i midten*/
     display: grid;
+    margin-bottom: 5em;
     width: 70vw; /*samme bredde som solen*/
     height: 100%;
     grid: 140px 210px 140px 210px 140px / 140px 210px 210px 140px;
@@ -480,6 +511,7 @@ h3{
     grid-column: 3 / 4;
     background: url(images/img_2797.jpg) no-repeat center;
     background-size: cover;
+    box-shadow: 0 0 20px 0.5px black;
 }
 
 #billedegridhvidbjerg #B{
@@ -487,6 +519,7 @@ h3{
     grid-column: 1 / 2;
     background: url(images/img_2766.jpg) no-repeat center;
     background-size: cover;
+    box-shadow: 0 0 20px 0.5px black;
 }
 
 #billedegridhvidbjerg #C{
@@ -494,6 +527,7 @@ h3{
     grid-column: 2 / 3;
     background: url(images/img_114239.jpg) no-repeat center;
     background-size: cover;
+    box-shadow: 0 0 20px 0.5px black;
 }
 
 #billedegridhvidbjerg #D{
@@ -501,6 +535,7 @@ h3{
     grid-column: 3 / 5;
     background: url(images/img_2773.jpg) no-repeat bottom;
     background-size: cover;
+    box-shadow: 0 0 20px 0.5px black;
 }
 
 #billedegridhvidbjerg #E{
@@ -508,6 +543,7 @@ h3{
     grid-column: 1 / 3;
     background: url(images/img_2768.jpg) no-repeat bottom;
     background-size: cover;
+    box-shadow: 0 0 20px 0.5px black;
 }
 
 #billedegridhvidbjerg #F{
@@ -515,6 +551,7 @@ h3{
     grid-column: 3 / 4;
     background: url(images/img_2803.jpg) no-repeat left;
     background-size: cover;
+    box-shadow: 0 0 20px 0.5px black;
 }
 
 #billedegridhvidbjerg #G{
@@ -522,6 +559,7 @@ h3{
     grid-column: 4 / 5;
     background: url(images/img_2750.jpg) no-repeat right;
     background-size: cover;
+    box-shadow: 0 0 20px 0.5px black;
 }
 
 #billedegridhvidbjerg #H{
@@ -531,6 +569,7 @@ h3{
     background: url(images/img_2786.jpg) no-repeat center;
     background-size: cover;
     justify-self: end; /*så den er parallel med den inderste linje*/
+    box-shadow: 0 0 20px 0.5px black;
 }
 
 /*------styles til underside footer*/
@@ -539,26 +578,26 @@ h3{
     display: flex; /*så knapperne kommer på samme linje*/
     justify-content: center; /*så de kommer i midten*/
     gap: 2em;
-    font-size: 24pt;
     margin: 0.75em 0;
 }
 
-#omknap, #kontaktknap{
+#footerknapper .knap{
+    font-size: 28pt;
     padding: 2%;
-    border-style: solid;
-    border-color: white;
-    border-width: 3.5px;
-    border-radius: 10px;
+}
+
+#footerknapper .knap:hover{
+    transform: scale(1.10); /*mindre end knapperne i maincontent*/
 }
 
 #omknap{
-    width: 5em; /*så tæksten kommer ned på en linje*/
     background-color: #ff9412;
+    width: 5em; /*ellers står teksten på to linjer*/
 }
 
 #kontaktknap{
-    width: 4em;
     background-color: #f4af07;
+    width: 3.5em;
 }
 
 footer .some{
@@ -574,6 +613,7 @@ footer .some img{
 
 footer .some p{
     display: none;
+    margin: 0;
 }
 
 /*-------styles til underside træskohage----------*/
@@ -591,6 +631,7 @@ footer .some p{
 #trebilledertrasko .enaftre:nth-child(1){
     background: url(images/img_2913.jpg) no-repeat bottom;
     background-size: cover;
+    box-shadow: 0 0 25px 1px black;
 }
 
 #trebilledertrasko .enaftre:nth-child(2){
@@ -598,11 +639,13 @@ footer .some p{
     height: 325px;
     background: url(images/img_2934.jpg) no-repeat center;
     background-size: cover;
+    box-shadow: 0 0 25px 1px black;
 }
 
 #trebilledertrasko .enaftre:nth-child(3){
     background: url(images/img_2927.jpg) no-repeat right;
     background-size: cover;
+    box-shadow: 0 0 25px 1px black;
 }
 
 #billedecollagetrasko{
@@ -643,6 +686,7 @@ footer .some p{
     width: 100vw;
     height: 100vh;
     background: url(images/img_2882.jpg) no-repeat center;
+    box-shadow: 0 0 30px 1px white;
 }
 
 #billedegridtrasko{
@@ -661,6 +705,7 @@ footer .some p{
     grid-column: 3 / 4;
     background: url(images/img_2878.jpg) no-repeat center;
     background-size: cover;
+    box-shadow: 0 0 20px 0.5px black;
 }
 
 #billedegridtrasko #B{
@@ -668,6 +713,7 @@ footer .some p{
     grid-column: 1 / 2;
     background: url(images/img_2937.jpg) no-repeat;
     background-size: cover;
+    box-shadow: 0 0 20px 0.5px black;
 }
 
 #billedegridtrasko #C{
@@ -675,6 +721,7 @@ footer .some p{
     grid-column: 2 / 3;
     background: url(images/img_2906.jpg) no-repeat;
     background-size: cover;
+    box-shadow: 0 0 20px 0.5px black;
 }
 
 #billedegridtrasko #D{
@@ -682,6 +729,7 @@ footer .some p{
     grid-column: 3 / 5;
     background: url(images/img_2917.jpg) no-repeat bottom;
     background-size: cover;
+    box-shadow: 0 0 20px 0.5px black;
 }
 
 #billedegridtrasko #E{
@@ -689,6 +737,7 @@ footer .some p{
     grid-column: 1 / 3;
     background: url(images/img_2935.jpg) no-repeat center;
     background-size: cover;
+    box-shadow: 0 0 20px 0.5px black;
 }
 
 #billedegridtrasko #F{
@@ -696,6 +745,7 @@ footer .some p{
     grid-column: 3 / 4;
     background: url(images/img_2922.jpg) no-repeat left;
     background-size: cover;
+    box-shadow: 0 0 20px 0.5px black;
 }
 
 #billedegridtrasko #G{
@@ -703,6 +753,7 @@ footer .some p{
     grid-column: 4 / 5;
     background: url(images/img_2880.jpg) no-repeat center;
     background-size: cover;
+    box-shadow: 0 0 20px 0.5px black;
 }
 
 #billedegridtrasko #H{
@@ -712,6 +763,7 @@ footer .some p{
     background: url(images/img_2931.jpg) no-repeat center;
     background-size: cover;
     justify-self: end; /*så den er parallel med den inderste linje*/
+    box-shadow: 0 0 20px 0.5px black;
 }
 
 /*------Styles til underside Holster hage*/
@@ -728,6 +780,7 @@ footer .some p{
 #trebillederholster .enaftre:nth-child(1){
     background: url(images/img_2856.jpg) no-repeat center;
     background-size: cover;
+    box-shadow: 0 0 25px 1px black;
 }
 
 #trebillederholster .enaftre:nth-child(2){
@@ -735,11 +788,13 @@ footer .some p{
     height: 325px;
     background: url(images/img_2917.jpg) no-repeat right;
     background-size: cover;
+    box-shadow: 0 0 25px 1px black;
 }
 
 #trebillederholster .enaftre:nth-child(3){
     background: url(images/img_2858.jpg) no-repeat center;
     background-size: cover;
+    box-shadow: 0 0 25px 1px black;
 }
 
 #billedecollageholster{
@@ -781,6 +836,7 @@ footer .some p{
     height: 100vh;
     background: url(images/img_2823.jpg) no-repeat center;
     background-size: cover;
+    box-shadow: 0 0 30px 1px white;
 }
 
 #billedegridholster{
@@ -799,6 +855,7 @@ footer .some p{
     grid-column: 3 / 4;
     background: url(images/img_2844.jpg) no-repeat;
     background-size: cover;
+    box-shadow: 0 0 20px 0.5px black;
 }
 
 #billedegridholster #B{
@@ -806,6 +863,7 @@ footer .some p{
     grid-column: 1 / 2;
     background: url(images/img_2836.jpg) no-repeat;
     background-size: cover;
+    box-shadow: 0 0 20px 0.5px black;
 }
 
 #billedegridholster #C{
@@ -813,6 +871,7 @@ footer .some p{
     grid-column: 2 / 3;
     background: url(images/img_2853.jpg) no-repeat right;
     background-size: cover;
+    box-shadow: 0 0 20px 0.5px black;
 }
 
 #billedegridholster #D{
@@ -820,6 +879,7 @@ footer .some p{
     grid-column: 3 / 5;
     background: url(images/img_2825.jpg) no-repeat bottom;
     background-size: cover;
+    box-shadow: 0 0 20px 0.5px black;
 }
 
 #billedegridholster #E{
@@ -827,6 +887,7 @@ footer .some p{
     grid-column: 1 / 3;
     background: url(images/img_2861.jpg) no-repeat center;
     background-size: cover;
+    box-shadow: 0 0 20px 0.5px black;
 }
 
 #billedegridholster #F{
@@ -834,6 +895,7 @@ footer .some p{
     grid-column: 3 / 4;
     background: url(images/img_2847.jpg) no-repeat center;
     background-size: cover;
+    box-shadow: 0 0 20px 0.5px black;
 }
 
 #billedegridholster #G{
@@ -841,6 +903,7 @@ footer .some p{
     grid-column: 4 / 5;
     background: url(images/img_2828.jpg) no-repeat center;
     background-size: cover;
+    box-shadow: 0 0 20px 0.5px black;
 }
 
 #billedegridholster #H{
@@ -850,6 +913,7 @@ footer .some p{
     background: url(images/img_2814.jpg) no-repeat center;
     background-size: cover;
     justify-self: end; /*så den er parallel med den inderste linje*/
+    box-shadow: 0 0 20px 0.5px black;
 }
 
 /*-------styles til underside roadtrip-----*/
@@ -1080,6 +1144,10 @@ article h2{
 
     #beskrivelseskort{
         width: 85vw;
+    }
+
+    #beskrivelsep{
+        padding: 0;
     }
 
     #billedecollagehvidbjerg #img1{
