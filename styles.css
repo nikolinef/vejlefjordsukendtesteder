@@ -85,6 +85,7 @@ main{
 
 .billedekort:nth-child(3){
     background: url(images/img_2818.jpg) no-repeat center;
+    background-size: cover;
 }
 
 a:link{
