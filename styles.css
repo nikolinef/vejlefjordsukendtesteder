@@ -61,7 +61,7 @@ main{
 .billedekort{
     width: 34%;
     height: 100%;
-    padding: 1em 1em;
+    padding: 1em;
     display: flex; /*for at rykke teksten inde i kortene ned i bunden*/
     flex-direction: column; 
     justify-content: end;
@@ -944,8 +944,8 @@ article #beskrivelsep{
 }
 
 .sektion{
-    display: flex;
-    align-items: center; /*så de kommer på lodret linje*/
+    display: flex; /*så de kommer på lodret linje*/
+    align-items: center; /*så de bliver centreret på y-aksen*/
     margin: 4em 1em;
 }
 
