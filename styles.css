@@ -76,11 +76,13 @@ main{
 }
 
 .billedekort:first-child{
-    background: url(images/img_2767.jpg) no-repeat center;
+    background: url(images/img_2767.jpg) no-repeat;
+    background-size: cover;
 }
 
 .billedekort:nth-child(2){
     background: url(images/img_2882.jpg) no-repeat center;
+    background-size: cover;
 }
 
 .billedekort:nth-child(3){
@@ -113,7 +115,7 @@ p{
 .roadtripkort{
     width: 70vw;
     height: 90vh;
-    background: url(images/kortmtekst.jpg) no-repeat center;
+    background: url(images/kortmtekst.jpg) no-repeat right;
     background-size: cover; /*shortcut reagere ikke på cover...*/
     display: flex;
     align-items: end;
@@ -208,10 +210,13 @@ p{
 .some{
     display: flex; 
     flex-direction: column;
-    flex-wrap: wrap; /*så teksten kommer neden under ikonerne*/
     justify-content: space-around;
-    height: 25vh; /*så der kun er plads et ikon og tekst*/
-    margin: 1em 0;
+    padding: 2em;
+}
+
+.some img{
+    height: 5em;
+    margin: 1em 0 0.5em 0;
 }
 
 .some a{
@@ -411,7 +416,7 @@ label img{ /*når man klikker på søg ikonet kommer man til inputfeltet*/
 
 .halvbeskrivelse {
     display: flex;
-    flex-wrap: wrap; /*så den tredje .h3ogp automatisk kommer ned under hindanden*/
+    flex-wrap: wrap; /*så den tredje .h3ogp automatisk kommer ned under*/
 }
 
 .halvbeskrivelse h3{
@@ -1103,16 +1108,8 @@ article #beskrivelsep{
         width: 90vw;
     }
 
-    .some {
-        flex-wrap: wrap;
-        height: auto;
-        height: 100%;
-        justify-content: space-between;
-    }
-
     .some img{
-        height: 60px;
-        margin: 1em 0 0.5em 0;
+        height: 4.5em;
     }
 
     /*-----styles til forside footer-----*/
@@ -1378,14 +1375,8 @@ article #beskrivelsep{
         padding: 1.5em;
     }
 
-    /*.some{
-        height: 100%;
-        justify-content: space-between;
-    }*/
-
     .some img{
-        height: 50px;
-        margin-bottom: 0;
+        height: 4em;
     }
 
     #følgos a{
